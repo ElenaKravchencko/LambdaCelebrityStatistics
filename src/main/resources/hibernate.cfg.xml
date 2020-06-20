@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgresPlusDialect</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://database-1.cbl1zslcidmk.us-east-1.rds.amazonaws.com:5432/database1</property>
+        <property name="hibernate.connection.username">postgres1</property>
+        <property name="hibernate.connection.password">postgres1</property>
+        <!--<property name="hibernate.hbm2ddl.auto">update</property>!-->
+        <property name="hibernate.connection.pool_size">10</property>
+        <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+
+        <mapping class="com.mobimore.domain.File"/>
+        <mapping class="com.mobimore.domain.Request"/>
+
+    </session-factory>
+</hibernate-configuration>
